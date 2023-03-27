@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals';
 import { reaction } from 'mobx';
 import { setTimeoutAsync } from '@zajno/common/async/timeout';
 
@@ -10,7 +11,7 @@ describe('Lazy', () => {
         const createObj = () => ({ str: 'abc' });
         const l = new LazyObservable(() => createObj());
 
-        const listener = jest.fn().mockImplementation();
+        const listener = jest.fn().mockImplementation(() => { /* no-op */ });
 
         const clean = reaction(() => l.value, listener, { fireImmediately: true });
 
@@ -40,7 +41,7 @@ describe('LazyPromise', () => {
         expect(l.busy).toBeTrue();
         expect(l.promise).not.toBeNull();
 
-        const listener = jest.fn().mockImplementation();
+        const listener = jest.fn().mockImplementation(() => { /* no-op */ });
         const clean = reaction(() => l.value, listener, { fireImmediately: true });
 
         expect(listener).toHaveBeenCalledWith(undefined, expectAnythingOrNothing, expectAnythingOrNothing);

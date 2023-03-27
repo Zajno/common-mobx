@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals';
 import { observable, reaction, runInAction, toJS } from 'mobx';
 import { SubscribersPromiseCache } from '../subscribersPromiseCache';
 import { setTimeoutAsync } from '@zajno/common/async/timeout';
@@ -20,8 +21,8 @@ function createData() {
         },
     };
 
-    const subscribeFn = jest.fn().mockImplementation();
-    const unsubFn = jest.fn().mockImplementation();
+    const subscribeFn = jest.fn().mockImplementation(() => { /* no-op */ });
+    const unsubFn = jest.fn().mockImplementation(() => { /* no-op */ });
 
     const Cache = new SubscribersPromiseCache((key, cb) => {
         subscribeFn(key);

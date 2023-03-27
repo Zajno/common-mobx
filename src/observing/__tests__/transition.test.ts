@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals';
 import { observable, runInAction } from 'mobx';
 import { TransitionObserver } from '../transition';
 
@@ -130,8 +131,8 @@ describe('TransitionObserver', () => {
     it('tracks only correct transition – <any>', () => {
         const store = createStore<boolean | null>(true);
 
-        const cb = jest.fn();
-        const cbE = jest.fn();
+        const cb = jest.fn(() => { /* no-op */ });
+        const cbE = jest.fn(() => { /* no-op */ });
 
         const to = new TransitionObserver(() => store.value)
             .cb(cb);

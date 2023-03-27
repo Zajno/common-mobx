@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals';
 import { reaction, toJS } from 'mobx';
 import { arrayRepeat } from '@zajno/common/math';
 import { MultiSelect, MultiSelectString } from '../MultiSelectModel';
@@ -53,7 +54,7 @@ describe('MultiSelectModel', () => {
         expect(vm.selectedCount).toBe(0);
         expect(vm.selectedIndexes).toHaveLength(0);
 
-        const mocks = arrayRepeat(() => jest.fn().mockImplementation(null), 5);
+        const mocks = arrayRepeat(() => jest.fn().mockImplementation(() => { /* no-op */ }), 5);
         const [
             onSelectedIndexes,
             onSelectedItems,

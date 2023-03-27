@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals';
 import { ValidationErrors } from '@zajno/common/validation';
 import { setTimeoutAsync } from '@zajno/common/async/timeout';
 import { CommonModel } from '../CommonModel';
