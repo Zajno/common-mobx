@@ -1,6 +1,6 @@
 {
   "name": "@zajno/common-mobx",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Zajno's re-usable utilities for JS/TS projects using MobX",
   "main": "index.js",
   "author": "Zajno <hello@zajno.com> (https://zajno.com)",
@@ -28,19 +28,19 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
-    "@types/node": "^18.15.10",
+    "@types/node": "^18.15.11",
     "@zajno/common": "^3.0.0",
     "@zajno/eslint-config": "^2.3.0",
     "cpy-cli": "^4.2.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.36.0",
+    "eslint": "^8.38.0",
     "jest": "^29.5.0",
     "jest-extended": "^3.2.4",
     "mobx": "^6.9.0",
     "rimraf": "^3",
-    "ts-jest": "^29.0.5",
+    "ts-jest": "^29.1.0",
     "tslib": "^2.5.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
     "@zajno/common": "^3.0.0",
