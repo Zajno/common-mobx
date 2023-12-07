@@ -1,5 +1,9 @@
 # Zajno's Toolbox – MobX
 
+Archived: moved to [Zajno/common](https://github.com/Zajno/common-utils/tree/main/packages/common-mobx)
+
+---
+
 This library is an extension for [`@zajno/common`](https://github.com/Zajno/common-utils), which adds more tools but based on [MobX](https://mobx.js.org/) library.
 
 All runtime dependencies are peer.
